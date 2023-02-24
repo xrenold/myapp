@@ -17,4 +17,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "variable access test ${{ secrets.SECRET_KEY }}."
+      - run: echo "secret access test ${{ secrets.SECRET_KEY }}."
+      - run: echo "variable access test ${{ vars.HOST_NAME }}."
