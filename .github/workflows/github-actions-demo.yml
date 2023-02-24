@@ -25,3 +25,4 @@ jobs:
           echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env.develop
           echo HOST_NAME=${{ vars.HOST_NAME }} >> .env.develop
           cat .env.develop
+          ls
