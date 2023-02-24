@@ -19,3 +19,9 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "secret access test ${{ secrets.SECRET_KEY }}."
       - run: echo "variable access test ${{ vars.HOST_NAME }}."
+      - name: 'Create .env file'
+        run: |
+          touch .env.develop
+          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env.develop
+          echo HOST_NAME=${{ vars.HOST_NAME }} >> .env.develop
+          cat .env
